@@ -13,10 +13,11 @@ public class Analyze {
     private final List<Entry<Character, Integer>> characterCount;
 
     public Analyze(String text) {
-        textLength = new TextLength(text);
+        String textToAnalyze = text.toLowerCase();
+        textLength = new TextLength(textToAnalyze);
         wordCount = 0;
         characterCount = new ArrayList<>();
-        analyze(text);
+        analyze(textToAnalyze);
     }
 
     public TextLength getTextLength() {
@@ -31,14 +32,14 @@ public class Analyze {
         return characterCount;
     }
 
-    private void analyze(String text) {
-        countWords(text);
-        countChars(text);
+    private void analyze(String textToAnalyze) {
+        countWords(textToAnalyze);
+        countCharacters(textToAnalyze);
     }
 
-    private void countWords(String text) {
+    private void countWords(String textToAnalyze) {
         boolean onWord = false;
-        for (char c : text.toCharArray()) {
+        for (char c : textToAnalyze.toCharArray()) {
             if ((Character.isAlphabetic(c) || Character.isDigit(c)) && !onWord) {
                 onWord = true;
                 wordCount++;
@@ -48,9 +49,9 @@ public class Analyze {
         }
     }
 
-    private void countChars(String text) {
+    private void countCharacters(String textToAnalyze) {
         Map<Character, Integer> tempCounts = new TreeMap<>();
-        for (char c : text.toCharArray()) {
+        for (char c : textToAnalyze.toCharArray()) {
             if (Character.isAlphabetic(c)) {
                 if (!tempCounts.containsKey(c)) {
                     tempCounts.put(c, 0);

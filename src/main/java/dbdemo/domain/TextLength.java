@@ -2,12 +2,12 @@ package dbdemo.domain;
 
 public class TextLength {
 
-    private int withSpaces;
-    private int withoutSpaces;
+    private final int withSpaces;
+    private final int withoutSpaces;
 
     public TextLength(String text) {
         withSpaces = text.length();
-        withoutSpaces = lengthWithoutWhiteSpace(text);
+        withoutSpaces = countLengthWithoutWhiteSpace(text);
     }
 
     public int getWithSpaces() {
@@ -18,7 +18,7 @@ public class TextLength {
         return withoutSpaces;
     }
 
-    private int lengthWithoutWhiteSpace(String text) {
+    private int countLengthWithoutWhiteSpace(String text) {
         int whiteSpaceCount = 0;
         for (char c : text.toCharArray()) {
             if (Character.isWhitespace(c)) {
