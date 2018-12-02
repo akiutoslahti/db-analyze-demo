@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class AnalyzeRequestTest {
 
-    public static String TEST_STRING = "Hello analyze!";
+    public static final String TEST_STRING = "Hello analyze!";
 
     @Test
     public void setGetTest() {

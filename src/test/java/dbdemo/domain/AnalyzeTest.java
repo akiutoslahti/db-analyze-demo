@@ -13,7 +13,7 @@ import org.junit.Test;
 public class AnalyzeTest {
 
     private Analyze analyze;
-    private static String TEST_TEXT = "hello 2 times  ";
+    private static final String TEST_TEXT = "hello 2 times  ";
 
     @Before
     public void setUp() {
