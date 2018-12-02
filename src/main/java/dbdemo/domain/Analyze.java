@@ -14,10 +14,12 @@ public class Analyze {
 
     public Analyze(String text) {
         String textToAnalyze = text.toLowerCase();
+
         textLength = new TextLength(textToAnalyze);
         wordCount = 0;
         characterCount = new ArrayList<>();
-        analyze(textToAnalyze);
+
+        analyzeText(textToAnalyze);
     }
 
     public TextLength getTextLength() {
@@ -32,7 +34,7 @@ public class Analyze {
         return characterCount;
     }
 
-    private void analyze(String textToAnalyze) {
+    private void analyzeText(String textToAnalyze) {
         countWords(textToAnalyze);
         countCharacters(textToAnalyze);
     }
