@@ -8,5 +8,6 @@ deploy:
   api_key:
     secure: SKSsU53h7n7DEJXB6A7wc1s+P+egVC8TaU0ECCDTr5uYKA2Qv/5QLULYoMTpu+wgCRnGVmUGcz52sHghejxs1eUC7aint24YVbsmxmmCaeFHSXPsSfQBbd+ZTw2V+3c4x2SV8hYFB4TwtsqL5nmz9+H5pzgHyowLfOjesB5j6kIYY3mdTcFdDKj/QtIJWu1ZT6hrxB/mJ7W0KFwqMQUHgldB0UhlshBtNDIDbMp3pkOUFmb0favJw138bCeGCSd9We1TOgILR/9Qfrq1dvGmIB3prdEUr89flgUJcwhHWWWSFu/CiyXSlOe5naCtK5yDdUtU+c9KhOpPEpuX80xcrV2t1rQRz+EdhMNlcjOMGPZYyE/U12nzF86n0+zCQknFPu3iKwSOZ32HgL4eV+cHoQzC54p+e3/AmcgBg/KG1gVWmkWtlbTLGePXg9WJyWIpUnhwVrPgqa+YMc8iZ8e5z0r0biRuf2HiuqljPYMZ4P/LmiMzCsiztFcgELT7UXc2he9fo0DLBngxwuDL7UOvZTpMhGgM6R0ShyETRKDLmZQHbgnXBZ6kqmF/Zcp5oEAFrfCMps9MKX921KgEqJpGUdm8gVTVj8yRHduj2KdZ6fg+kxbDT+kEs9/Lrs7stU+souxbpd67pUmJ6or6ZParIwG2H7Aqw01miG0Yb1FJ3R4=
   app: db-analyze-demo
-  repo:
-    on: akiutoslahti/db-analyze-demo
+  on:
+    repo: akiutoslahti/db-analyze-demo
+    branch: master
